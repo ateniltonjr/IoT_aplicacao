@@ -1,10 +1,11 @@
 ![Capa do Projeto](https://github.com/user-attachments/assets/f2a5c9b8-6208-4723-8f46-1d74be421827)
 
-# **Tarefa de Aplicação IoT com BitDogLab e Raspberry Pi Pico W**** (\**)
+# **Tarefa de Aplicação IoT com BitDogLab e Raspberry Pi Pico W**\
 
-**Autor:** Atenilton Santos de Souza Júnior  ** (\**)
+**Autor:** Atenilton Santos de Souza Júnior \
 
-Este projeto é uma **tarefa prática de IoT** desenvolvida utilizando o **Raspberry Pi Pico W** e o **kit BitDogLab**. O objetivo é implementar um sistema de controle remoto via Wi-Fi com funcionalidades básicas de IoT, incluindo uma nova função de **ILUMINAÇÃO** para controle de LEDs.
+Este projeto é uma **tarefa prática de IoT** desenvolvida utilizando o **Raspberry Pi Pico W** e o **kit BitDogLab**.\
+O objetivo é implementar um sistema de controle remoto via Wi-Fi com funcionalidades básicas de IoT, incluindo uma nova função de **ILUMINAÇÃO** para controle de LEDs.\\
 
 ---
 
@@ -23,7 +24,7 @@ Este projeto é uma **tarefa prática de IoT** desenvolvida utilizando o **Raspb
 Esta atividade visa aplicar conceitos de **Internet das Coisas (IoT)** utilizando:
 - **Raspberry Pi Pico W** (com Wi-Fi integrado)
 - **Kit BitDogLab** (LEDs RGB, matriz WS2812, buzzer e display SSD1306)
-- **Protocolo HTTP** para comunicação via Wi-Fi ** (\**)
+- **Protocolo HTTP** para comunicação via Wi-Fi \
 
 O sistema permite:
 ✅ Controle remoto de LEDs RGB  
@@ -102,15 +103,11 @@ Edite config.h e insira:
 
 ### 3. Compile e Carregue
    
-bash
-
-mkdir build && cd build
-
-cmake ..
-
-make
-
-→ Transfira o .uf2 para o Pico.
+bash\
+mkdir build && cd build\
+cmake ..\
+make\
+→ Transfira o .uf2 para o Pico.\\
 
 Alternativa (VS Code + Extensão Pico)
 
@@ -140,15 +137,15 @@ bash
 git push origin feature/nova-funcionalidade
 Abra um Pull Request
 
-Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.** (\**)
+Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.\
 
-🔗 Repositório: ```https://github.com/ateniltonjr/IoT_aplicacao.git``` ** (\**)
+🔗 Repositório: ```https://github.com/ateniltonjr/IoT_aplicacao.git```\
 
 Você pode copiar este texto diretamente para o arquivo README.md do seu repositório no GitHub. O formato está otimizado para:
 - Visualização correta no GitHub
 - Links funcionais
 - Seções bem organizadas
 - Destaque para as novas funcionalidades
-- Compatibilidade com markdown do GitHub
+- Compatibilidade com markdown do GitHub\
 
 Recomendo verificar a URL da imagem de capa para garantir que esteja acessível publicamente.

@@ -82,8 +82,8 @@ O sistema permite:
 
 ### **1. Clone o Repositório**
 
-bash 
-```git clone https://github.com/ateniltonjr/IoT_aplicacao.git``` 
+bash    
+```git clone https://github.com/ateniltonjr/IoT_aplicacao.git```   
 cd IoT_aplicacao 
 
 
@@ -105,13 +105,13 @@ bash
 mkdir build && cd build  
 cmake ..  
 make  
-→ Transfira o .uf2 para o Pico.  
+→ Transfira o .uf2 para o Pico.    
 
-Alternativa (VS Code + Extensão Pico)
+Alternativa (VS Code + Extensão Pico)  
 
-Importe a pasta no VS Code
+Importe a pasta no VS Code  
 
-Compile usando a extensão Raspberry Pi Pico
+Compile usando a extensão Raspberry Pi Pico  
 
 
 ## Vídeo de Demonstração
@@ -127,12 +127,12 @@ Faça um fork do repositório
 
 Crie uma branch:
 
-bash
-git checkout -b feature/nova-funcionalidade
-Envie as alterações:
+bash  
+git checkout -b feature/nova-funcionalidade  
+Envie as alterações:  
 
-bash
-git push origin feature/nova-funcionalidade
+bash  
+git push origin feature/nova-funcionalidade  
 Abra um Pull Request
 
 Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.  

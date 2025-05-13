@@ -139,9 +139,10 @@ git push origin feature/nova-funcionalidade
 Abra um Pull Request
 
 Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.
+````
 
 🔗 Repositório: https://github.com/ateniltonjr/IoT_aplicacao.git
-
+````
 
 Você pode copiar este texto diretamente para o arquivo README.md do seu repositório no GitHub. O formato está otimizado para:
 - Visualização correta no GitHub

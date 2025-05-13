@@ -85,8 +85,10 @@ git clone https://github.com/ateniltonjr/IoT_aplicacao.git
 
 cd IoT_aplicacao
 
+
 ### 2. Configure a Rede Wi-Fi
-   
+
+  
 Edite config.h e insira:
 
 #### c
@@ -114,9 +116,11 @@ Importe a pasta no VS Code
 
 Compile usando a extensão Raspberry Pi Pico
 
+
 ## Vídeo de Demonstração
 
 ▶ Assista ao teste aqui
+
 
 ## Contribuições
 

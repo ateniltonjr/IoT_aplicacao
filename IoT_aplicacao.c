@@ -63,8 +63,6 @@ int main() {
     stdio_init_all(); //Inicialização da comunicação serial
     display(); // Inicialização do display
     sleep_ms(100); // Delay de 100 ms
-    
-    depuracao_wifi(); // Mensagens de depuração
 
     // Para ser utilizado o modo BOOTSEL com botão B
     iniciar_botoes();
@@ -72,9 +70,12 @@ int main() {
     // Fim do trecho para modo BOOTSEL com botão B
 
     iniciar_rgb(); // Inicialização dos leds RGB
+    iniciar_gpios_externos();
     controle(PINO_MATRIZ); // Inicialização da matriz de leds
     gpio_init(BUZZER_PIN); // Inicialização do BUZZER
     gpio_set_dir(BUZZER_PIN, GPIO_OUT); // Buzzer iniciado como saída
+
+    depuracao_wifi(); // Mensagens de depuração
 
     start_http_server(); // Inicia o servidor HTTP
     

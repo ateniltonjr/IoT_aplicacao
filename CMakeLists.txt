@@ -41,7 +41,8 @@ add_executable(IoT_aplicacao
                 C/handlers_led.c
                 C/handlers_notas.c
                 C/matriz_numbers.c
-                C/matriz_cores.c )
+                C/matriz_cores.c 
+                C/handlers_gpios.c)
 
 pico_set_program_name(IoT_aplicacao "IoT_aplicacao")
 pico_set_program_version(IoT_aplicacao "0.1")

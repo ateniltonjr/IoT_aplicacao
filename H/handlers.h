@@ -17,6 +17,8 @@
 #include "H/handlers_led.h"
 #include "H/handlers_notas.h"
 #include "H/matriz_numbers.h"
+#include "H/pinos_externos.h"
+#include "H/handlers_gpios.h"
 
 // Definições dos pinos para comunicação I2C
 #define I2C_PORT i2c1
@@ -42,6 +44,7 @@ void handle_matriz_action(const char *request);
 void handle_cores_action(const char *request);
 void handle_led_action(const char *request);
 void handle_nota_action(const char *request);
+void handle_gpios_action(const char *request);
 
 // Função para tocar uma nota musical
 void tocar_nota(int frequencia, int duracao);

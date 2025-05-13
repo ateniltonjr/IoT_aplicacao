@@ -37,6 +37,9 @@ void handle_main_menu(const char *request) {
     } else if (strstr(request, "GET /nota")) {
         handle_nota_action(request);
         return;
+    } else if (strstr(request, "GET /gpio")) {
+        handle_gpios_action(request);
+        return;
     }
     
 snprintf(http_response, sizeof(http_response),
@@ -64,6 +67,7 @@ snprintf(http_response, sizeof(http_response),
          "<div class='menu-row'>"
          "<a href='/matriz'>Exibir números</a>"
          "<a href='/cores'>Iluminação</a>"
+         "<a href='/gpio'>Pinos Externos</a>"
          "</div>"
          "<div class='menu-row'>"
          "<a href='/led'>Controle dos LEDs RGB</a>"
@@ -92,6 +96,8 @@ err_t http_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) 
         handle_led_action(request);
     } else if (strstr(request, "GET /nota")) {
         handle_nota_action(request);
+    }  else if (strstr(request, "GET /gpio")) {
+        handle_gpios_action(request);
     } else {
         handle_main_menu(request);
     }

@@ -81,30 +81,45 @@ O sistema permite:
 
 ### **1. Clone o Repositório**
 ```bash```
-git clone https://github.com/ateniltonjr/proj_wifi.git
-cd proj_wifi
-2. Configure a Rede Wi-Fi
+git clone https://github.com/ateniltonjr/IoT_aplicacao.git
+
+cd IoT_aplicacao
+
+### 2. Configure a Rede Wi-Fi
+   
 Edite config.h e insira:
 
-c
+#### c
+
 #define WIFI_SSID "SUA_REDE"
+
 #define WIFI_PASSWORD "SENHA"
-3. Compile e Carregue
+
+
+### 3. Compile e Carregue
+   
 bash
+
 mkdir build && cd build
+
 cmake ..
+
 make
+
 → Transfira o .uf2 para o Pico.
 
 Alternativa (VS Code + Extensão Pico)
+
 Importe a pasta no VS Code
 
 Compile usando a extensão Raspberry Pi Pico
 
-Vídeo de Demonstração
+## Vídeo de Demonstração
+
 ▶ Assista ao teste aqui
 
-Contribuições
+## Contribuições
+
 Contribuições são bem-vindas! Siga os passos:
 
 Faça um fork do repositório
@@ -121,7 +136,7 @@ Abra um Pull Request
 
 Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.
 
-🔗 Repositório: github.com/ateniltonjr/proj_wifi
+🔗 Repositório: https://github.com/ateniltonjr/IoT_aplicacao.git
 
 
 Você pode copiar este texto diretamente para o arquivo README.md do seu repositório no GitHub. O formato está otimizado para:

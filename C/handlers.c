@@ -1,5 +1,5 @@
-#include "handlers.h"
-
+#include "H/handlers.h"
+  
 char http_response[2048];
 ssd1306_t ssd;
 bool cor = true;
@@ -39,36 +39,41 @@ void handle_main_menu(const char *request) {
         return;
     }
     
-    snprintf(http_response, sizeof(http_response),
-             "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n"
-             "<!DOCTYPE html><html lang='pt-BR'>"
-             "<head>"
-             "<meta charset='UTF-8'>"
-             "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
-             "<title>Controle de LEDs</title>"
-             "<style>"
-             "body { font-family: Arial, sans-serif; background-color:rgb(26, 26, 82); color: #333; margin: 0; padding: 0; }"
-             "h1 { text-align: center; color:rgb(190, 25, 20); margin-top: 20px; }"
-             ".container { max-width: 800px; margin: 0 auto; padding: 20px; }"
-             ".menu { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }"
-             ".menu a { text-decoration: none; background-color:rgb(190, 25, 20); color: white; padding: 15px 30px; border-radius: 5px; font-size: 18px; transition: background-color 0.3s; }"
-             ".menu a:hover { background-color:rgb(190, 25, 20); }"
-             ".footer { text-align: center; margin-top: 50px; font-size: 14px; color: #777; }"
-             "</style>"
-             "</head>"
-             "<body>"
-             "<div class='container'>"
-             "<h1>Bem-vindo</h1>"
-             "<div class='menu'>"
-             "<a href='/matriz'>Exibir números</a>"
-             "<a href='/cores'>Iluminação</a>"
-             "<a href='/led'>Controle dos LEDs RGB</a>"
-             "<a href='/nota'>Controle de Notas Musicais</a>"
-             "</div>"
-             "<div class='footer'>Projeto Final do Curso EmbarcaTech</div>"
-             "<div class='footer'>Desenvolvido por Atenilton Junior \r\n77999432631"
-             "</div>"
-             "</body></html>\r\n");
+snprintf(http_response, sizeof(http_response),
+         "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n"
+         "<!DOCTYPE html><html lang='pt-BR'>"
+         "<head>"
+         "<meta charset='UTF-8'>"
+         "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+         "<title>Controle de LEDs</title>"
+         "<style>"
+         "body { font-family: Arial, sans-serif; background-color:rgb(26, 26, 82); color: #333; margin: 0; padding: 0; }"
+         "h1 { text-align: center; color:rgb(190, 25, 20); margin-top: 20px; }"
+         ".container { max-width: 800px; margin: 0 auto; padding: 20px; }"
+         ".menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }"
+         ".menu-row { display: flex; justify-content: center; width: 100%; gap: 20px; margin-bottom: 20px; }"
+         ".menu a { text-decoration: none; background-color:rgb(190, 25, 20); color: white; padding: 15px 30px; border-radius: 5px; font-size: 18px; transition: background-color 0.3s; flex: 0 0 calc(50% - 40px); text-align: center; max-width: 300px; box-sizing: border-box; }"
+         ".menu a:hover { background-color:rgb(160, 20, 15); }"
+         ".footer { text-align: center; margin-top: 50px; font-size: 14px; color: #777; }"
+         "</style>"
+         "</head>"
+         "<body>"
+         "<div class='container'>"
+         "<h1>Bem-vindo</h1>"
+         "<div class='menu'>"
+         "<div class='menu-row'>"
+         "<a href='/matriz'>Exibir números</a>"
+         "<a href='/cores'>Iluminação</a>"
+         "</div>"
+         "<div class='menu-row'>"
+         "<a href='/led'>Controle dos LEDs RGB</a>"
+         "<a href='/nota'>Controle de Notas Musicais</a>"
+         "</div>"
+         "</div>"
+         "<div class='footer'>APLICAÇÃO IoT</div>"
+         "<div class='footer'>Desenvolvido por ateniltonjr"
+         "</div>"
+         "</body></html>\r\n");
 }
 
 err_t http_callback(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {

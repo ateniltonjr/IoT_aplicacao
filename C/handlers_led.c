@@ -98,8 +98,8 @@ void handle_led_action(const char *request) {
              "<a href='/led/off'>Desligar</a>"
              "<a href='/voltar'>Voltar</a>"
              "</div>"
-             "<div class='footer'>Projeto Final de Curso - Controle de LEDs</div>"
-             "<div class='footer'>Desenvolvido por Atenilton Junior - 77999432631</div>"
+             "<div class='footer'>APLICAÇÃO IoT - Controle de LEDs</div>"
+             "<div class='footer'>Desenvolvido por ateniltonjr - 77999432631</div>"
              "</div>"
              "</body></html>\r\n");
 }

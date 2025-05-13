@@ -23,8 +23,7 @@
 #define I2C_SDA 14
 #define I2C_SCL 15
 #define ENDERECO 0x3C
-//#define WIFI_SSID "Galaxy S20 FE 5G"
-//#define WIFI_PASS "abcd9700"
+
 #define BUZZER_PIN 21
 
 extern char http_response[2048];
@@ -56,4 +55,4 @@ err_t connection_callback(void *arg, struct tcp_pcb *newpcb, err_t err);
 // Função de setup do servidor TCP
 void start_http_server();
 
-#endif // HANDLERS_H
+#endif 

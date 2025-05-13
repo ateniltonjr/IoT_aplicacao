@@ -1,7 +1,7 @@
 #ifndef HANDLERS_CORES_H
 #define HANDLERS_CORES_H
 
-#include "handlers.h"
+#include "H/handlers.h"
 #include "H/matriz_cores.h"
 
 // Enumeração para as ações da matriz

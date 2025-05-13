@@ -123,7 +123,7 @@ void handle_nota_action(const char *request) {
              "<a href='/nota/off'>Desligar</a>"
              "<a href='/voltar'>Voltar</a>"
              "</div>"
-             "<div class='footer'>Projeto Final de Curso - Controle de Notas Musicais</div>"
+             "<div class='footer'>APLICAÇÃO IoT - Controle de Notas Musicais</div>"
              "</div>"
              "</body></html>\r\n");
 }

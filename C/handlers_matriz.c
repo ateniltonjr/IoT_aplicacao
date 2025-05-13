@@ -96,7 +96,7 @@ void handle_matriz_action(const char *request) {
              "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
              "<title>Exibir Números</title>"
              "<style>"
-             "body { font-family: Arial, sans-serif; background-color:rgb(8, 8, 112); color: #333; margin: 0; padding: 0; }"
+             "body { font-family: Arial, sans-serif; background-color:rgb(26, 26, 82); color: #333; margin: 0; padding: 0; }"
              "h1 { text-align: center; color:rgb(240, 220, 30); margin-top: 20px; }"
              ".container { max-width: 800px; margin: 0 auto; padding: 20px; }"
              ".grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 30px; }"
@@ -122,7 +122,7 @@ void handle_matriz_action(const char *request) {
              "<a href='/matriz/off'>Desligar</a>"
              "<a href='/voltar'>Voltar</a>"
              "</div>"
-             "<div class='footer'>Projeto Final do curso</div>"
+             "<div class='footer'>APLICAÇÃO IoT</div>"
              "</div>"
              "</body></html>\r\n");
 }

@@ -5,7 +5,7 @@
   
  ***************************************/
 
-#include "handlers.h"
+#include "H/handlers.h"
 #include "H/buttons.h"
 
 // Defina o SSID e a senha do Wi-Fi aqui:
@@ -50,9 +50,9 @@ int depuracao_wifi()
 
         char ip_str[20];
         ssd1306_fill(&ssd, !cor);
-        escrever(&ssd, "Endereco IP ", 20, 10, cor);
+        escrever(&ssd, "Endereco IP:", 20, 10, cor);
         snprintf(ip_str, sizeof(ip_str), "%d.%d.%d.%d", ip_address[0], ip_address[1], ip_address[2], ip_address[3]);
-        escrever(&ssd, ip_str, 0, 35, cor);
+        escrever(&ssd, ip_str, 15, 35, cor);
     }
 
         printf("Wi-Fi conectado!\n");

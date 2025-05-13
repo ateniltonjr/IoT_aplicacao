@@ -1,7 +1,7 @@
 #ifndef HANDLERS_NOTAS_H
 #define HANDLERS_NOTAS_H
 
-#include "handlers.h"
+#include "H/handlers.h"
 #include "H/notas.h"
 
 // Enumeração para as ações das notas musicais

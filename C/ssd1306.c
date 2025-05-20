@@ -198,3 +198,26 @@ void ssd1306_draw_string(ssd1306_t *ssd, const char *str, uint8_t x, uint8_t y)
     }
   }
 }
+
+ssd1306_t ssd;
+bool cor = true;
+
+void display() {
+    i2c_init(I2C_PORT, 400 * 1000);
+    gpio_set_function(I2C_SDA, GPIO_FUNC_I2C);
+    gpio_set_function(I2C_SCL, GPIO_FUNC_I2C);
+    gpio_pull_up(I2C_SDA);
+    gpio_pull_up(I2C_SCL);
+
+    ssd1306_init(&ssd, WIDTH, HEIGHT, false, ENDERECO, I2C_PORT);
+    ssd1306_config(&ssd);
+    ssd1306_send_data(&ssd);
+
+    ssd1306_fill(&ssd, false);
+    ssd1306_send_data(&ssd);
+}
+
+void escrever(ssd1306_t *display, const char *texto, uint8_t x, uint8_t y, bool cor) {
+    ssd1306_draw_string(display, texto, x, y);
+    ssd1306_send_data(display);
+}

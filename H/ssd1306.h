@@ -47,3 +47,18 @@ void ssd1306_hline(ssd1306_t *ssd, uint8_t x0, uint8_t x1, uint8_t y, bool value
 void ssd1306_vline(ssd1306_t *ssd, uint8_t x, uint8_t y0, uint8_t y1, bool value);
 void ssd1306_draw_char(ssd1306_t *ssd, char c, uint8_t x, uint8_t y);
 void ssd1306_draw_string(ssd1306_t *ssd, const char *str, uint8_t x, uint8_t y);
+
+// Definições dos pinos para comunicação I2C
+#define I2C_PORT i2c1
+#define I2C_SDA 14
+#define I2C_SCL 15
+#define ENDERECO 0x3C
+
+extern ssd1306_t ssd;
+extern bool cor;
+
+// Inicialização e configuração do I2C e do display OLED SSD1306
+void display();
+
+// Função para exibir uma mensagem em uma linha do display OLED
+void escrever(ssd1306_t *display, const char *texto, uint8_t x, uint8_t y, bool cor);

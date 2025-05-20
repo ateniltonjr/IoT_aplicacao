@@ -12,7 +12,7 @@
 const char *WIFI_SSID = "KLAZ"; // Nome do WI-FI
 const char *WIFI_PASS = "10213250"; // Senha do WI-FI
 
-int depuracao_wifi()
+int depuracao_e_wifi()
 {   
     printf("Iniciando servidor HTTP\n"); // Mensagem inicial
     ssd1306_fill(&ssd, !cor); //Atualiza o display
@@ -28,7 +28,7 @@ int depuracao_wifi()
     printf("Conectando ao Wi-Fi...\n");
     ssd1306_fill(&ssd, !cor);
     escrever(&ssd, "Conectando", 25, 10, cor);
-    escrever(&ssd, "WIFI", 50, 30, cor);
+    escrever(&ssd, "WI-FI", 49, 30, cor);
 
     if (cyw43_arch_wifi_connect_timeout_ms(WIFI_SSID, WIFI_PASS, CYW43_AUTH_WPA2_AES_PSK, 10000)) {
         printf("Falha ao conectar ao Wi-Fi\n");
@@ -75,7 +75,7 @@ int main() {
     gpio_init(BUZZER_PIN); // Inicialização do BUZZER
     gpio_set_dir(BUZZER_PIN, GPIO_OUT); // Buzzer iniciado como saída
 
-    depuracao_wifi(); // Mensagens de depuração
+    depuracao_e_wifi(); // Mensagens de depuração
 
     start_http_server(); // Inicia o servidor HTTP
     

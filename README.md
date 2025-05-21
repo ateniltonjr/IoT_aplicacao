@@ -2,7 +2,7 @@
 
 # **Sistema IoT Avançado para Automação Residencial**  
 
-**Autor:** Atenilton Santos de Souza Júnior 
+## **Autor:** Atenilton Santos de Souza Júnior 
 
 Este projeto é uma **solução completa de IoT** desenvolvida utilizando o **Raspberry Pi Pico W** e o **kit BitDogLab**, implementando um sistema de controle remoto multifuncional via Wi-Fi com aplicação em automação residencial. 
 

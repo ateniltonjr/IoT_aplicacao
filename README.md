@@ -1,16 +1,15 @@
 ![Capa do Projeto](https://github.com/user-attachments/assets/f2a5c9b8-6208-4723-8f46-1d74be421827)
 
-# **Tarefa de Aplicação IoT com BitDogLab e Raspberry Pi Pico W**  
+# **Sistema IoT Avançado para Automação Residencial**  
 
 **Autor:** Atenilton Santos de Souza Júnior 
 
-Este projeto é uma **tarefa prática de IoT** desenvolvida utilizando o **Raspberry Pi Pico W** e o **kit BitDogLab**.  
-O objetivo é implementar um sistema de controle remoto via Wi-Fi com funcionalidades básicas de IoT, incluindo uma nova função de **ILUMINAÇÃO** para controle de LEDs. 
+Este projeto é uma **solução completa de IoT** desenvolvida utilizando o **Raspberry Pi Pico W** e o **kit BitDogLab**, implementando um sistema de controle remoto multifuncional via Wi-Fi com aplicação em automação residencial. 
 
 ---
 
 ## **Sumário**
-1. [Objetivo da Tarefa](#objetivo-da-tarefa)  
+1. [Objetivo do Projeto](#objetivo-do-projeto)  
 2. [Funcionalidades Implementadas](#funcionalidades-implementadas)  
 3. [Hardware Utilizado](#hardware-utilizado)  
 4. [Software e Bibliotecas](#software-e-bibliotecas)  
@@ -20,132 +19,149 @@ O objetivo é implementar um sistema de controle remoto via Wi-Fi com funcionali
 
 ---
 
-## **Objetivo da Tarefa**
-Esta atividade visa aplicar conceitos de **Internet das Coisas (IoT)** utilizando:
-- **Raspberry Pi Pico W** (com Wi-Fi integrado)
-- **Kit BitDogLab** (LEDs RGB, matriz WS2812, buzzer e display SSD1306)
-- **Protocolo HTTP** para comunicação via Wi-Fi 
+## **Objetivo do Projeto**
+Este sistema integrado visa demonstrar na prática conceitos de **Internet das Coisas (IoT)** através de:
 
-O sistema permite:
-✅ Controle remoto de LEDs RGB  
-✅ Função de **ILUMINAÇÃO** (novo recurso)  
-✅ Exibição de informações no display  
-✅ Reprodução de notas musicais  
+- **Raspberry Pi Pico W** (com Wi-Fi integrado)
+- **Kit BitDogLab** completo
+- **Protocolos HTTP/WebSocket** para comunicação
+- **Controle multimodal** de dispositivos
+
+Principais aplicações:
+🏠 Automação residencial inteligente  
+🎛️ Controle remoto de iluminação e dispositivos  
+🎵 Sistema de alertas sonoros personalizáveis  
 
 ---
 
 ## **Funcionalidades Implementadas**
 
-### **1. Controle de LEDs RGB**
-- Ajuste de **cores** (R, G, B)
-- Controle de **intensidade**
+### **1. Controle Avançado de LEDs**
+- **LEDs RGB:**  
+  - 16 milhões de cores via código hexadecimal  
+  - Ajuste fino de intensidade  
+  - Transições suaves entre cores  
 
-### **2. ILUMINAÇÃO (Nova Função)**
-- Ativação/desativação de LEDs
-- Modos pré-configurados (ex.: piscar, fade)
+- **Matriz 5x5 WS2812:**  
+  - Dois modos operacionais:  
+    • **Numérico:** Exibição de 0-9 com cores customizáveis  
+    • **Iluminação:** Efeitos dinâmicos (respiração, pulsação)  
+  - Animações de transição entre estados  
 
-### **3. Matriz de LEDs WS2812**
-- Exibição de padrões e animações
+### **2. Sistema de Sonorização**
+- **Buzzer Musical:**  
+  - Escala diatônica completa (Dó a Si)  
+  - Precisão de frequência (±1Hz)  
+  - Duração controlável (100-2000ms)  
+  - Alertas sonoros programáveis  
 
-### **4. Buzzer**
-- Reprodução de notas musicais
+### **3. Gerenciamento de Dispositivos**
+- **Controle GPIO Externo:**  
+  - 4 pinos configuráveis como saída digital  
+  - Proteção contra curto-circuitos  
+  - Temporização programável  
 
-### **5. Display SSD1306**
-- Mostra **endereço IP** para conexão
+### **4. Interface Intuitiva**
+- **Portal Web Responsivo:**  
+  - Controle unificado de todos os periféricos  
+  - Modo adaptável para mobile/desktop  
+  - Visualização em tempo real do status  
 
-### **6. Interface Web**
-- Página HTML com botões para controle
+### **5. Recursos de Sistema**
+- **Conexão Wi-Fi Resiliente:**  
+  - Modo STA + AP (fallback automático)  
+  - Reconexão automática  
+- **Reset Seguro:**  
+  - Ativação por botão físico  
+  - Confirmação visual  
 
 ---
 
 ## **Hardware Utilizado**
-- **Raspberry Pi Pico W** (com Wi-Fi)
-- **Kit BitDogLab**
-  - LEDs RGB
-  - Matriz de LEDs WS2812
-  - Buzzer
-  - Display OLED SSD1306
+- **Raspberry Pi Pico W** (com Wi-Fi 2.4GHz)
+- **Kit BitDogLab Completo:**
+  - LEDs RGB (3 canais)
+  - Matriz de LEDs WS2812 (5x5)
+  - Buzzer piezoelétrico
+  - Display OLED SSD1306 (128x64)
+  - Botões programáveis
 
 ---
 
 ## **Software e Bibliotecas**
-- **Linguagem:** C (com Raspberry Pi Pico SDK)
-- **Bibliotecas:**
-  - `pico/stdlib.h`
-  - `pico/cyw43_arch.h` (Wi-Fi)
-  - `hardware/i2c.h` (display)
-  - `ws2812.pio.h` (matriz de LEDs)
+- **Linguagem:** C (com otimizações para IoT)
+- **Bibliotecas Principais:**
+  - `pico/cyw43_arch.h` (Wi-Fi seguro)
+  - `ws2812.pio.h` (controle matriz LED)
+  - `hardware/pwm.h` (geração notas musicais)
+  - `lwip/httpd.h` (servidor web leve)
 
 ---
 
 ## **Configuração e Uso**
 
-### **1. Clone o Repositório**
+### **1. Pré-requisitos**
 
-bash    
+- Raspberry Pi Pico W
+- 
+- Kit BitDogLab montado
+- 
+- IDE configurada (VS Code/Pico SDK)
 
-```git clone https://github.com/ateniltonjr/IoT_aplicacao.git```   
+### **2. Instalação**
 
-cd IoT_aplicacao 
+bash
 
+git clone https://github.com/ateniltonjr/IoT_aplicacao.git
 
-### 2. Configure a Rede Wi-Fi
+cd IoT_aplicacao
 
-  
-Edite config.h e insira:
+### 3. Configuração Wi-Fi
+   
+Edite config.h com suas credenciais:
 
-#### c
+c
 
 #define WIFI_SSID "SUA_REDE"
 
-#define WIFI_PASSWORD "SENHA"
+#define WIFI_PASSWORD "SUA_SENHA"
 
-
-### 3. Compile e Carregue
+### 4. Compilação
    
-bash  
-mkdir build && cd build  
-cmake ..  
-make  
-→ Transfira o .uf2 para o Pico.    
+bash
 
-Alternativa (VS Code + Extensão Pico)  
+mkdir build && cd build
 
-Importe a pasta no VS Code  
+cmake ..
 
-Compile usando a extensão Raspberry Pi Pico  
+make
 
+### 6. Upload
+Conecte o Pico em modo BOOTSEL
+
+Copie o arquivo iot_aplicacao.uf2
 
 ## Vídeo de Demonstração
-
-▶ Assista ao teste aqui
-
+▶ Assista a demonstração completa
+[Video aqui](https://www.youtube.com/watch?v=uucASxBZI4Y)
 
 ## Contribuições
 
-Contribuições são bem-vindas! Siga os passos:
+### Siga este fluxo para contribuir:
 
-Faça um fork do repositório
+- Faça um fork do projeto
 
-Crie uma branch:
+- Crie sua branch:
 
-bash  
-git checkout -b feature/nova-funcionalidade  
-Envie as alterações:  
+bash
 
-bash  
-git push origin feature/nova-funcionalidade  
-Abra um Pull Request
+git checkout -b minha-melhoria
 
-Nota: Este projeto é uma tarefa de IoT e não o produto final. Foi desenvolvido para aplicação prática com o BitDogLab.  
+- Envie suas alterações:
 
-🔗 Repositório: ```https://github.com/ateniltonjr/IoT_aplicacao.git```  
+- bash
 
-Você pode copiar este texto diretamente para o arquivo README.md do seu repositório no GitHub. O formato está otimizado para:
-- Visualização correta no GitHub
-- Links funcionais
-- Seções bem organizadas
-- Destaque para as novas funcionalidades
-- Compatibilidade com markdown do GitHub 
+- git push origin minha-melhoria
 
-Recomendo verificar a URL da imagem de capa para garantir que esteja acessível publicamente.
+- Abra um Pull Request
+
